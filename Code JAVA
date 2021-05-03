@@ -1,0 +1,106 @@
+package MonPackage;
+
+public class Nombre_Mysterieux
+{
+	public static void main(String[] args) 
+	{
+		//Déclaration des variables
+		
+		int Nbm, Nbt=0, Cpt;
+		String J1, J2;
+	
+		//Saisie des données par l'util.
+		J1 = Saisie.lire_String("Le premier joueur saisit son prénom");
+		J2 = Saisie.lire_String("Le deuxième joueur saisit son prénom");
+		Nbm = Saisie.lire_int(J1+ " veuillez saisir un nombre compris entre 1 et 100.");
+		
+		while (Nbm < 1)
+			Nbm = Saisie.lire_int("Erreur, " + J1 + " veuillez saisir un nombre compris entre 1 et 100.");
+		
+		while (Nbm > 100)
+			Nbm = Saisie.lire_int("Erreur, " + J1 + " veuillez saisir un nombre compris entre 1 et 100.");
+		
+		
+		Cpt = 0;
+		
+		// SAUT DE LIGNE
+		
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		System.out.println("------------PAS DE TRICHE !------------");
+		
+		// Fin de saut
+		
+		
+		// JOUEUR 2
+		
+		while ((Nbt != Nbm) && (Cpt<10))
+		{
+			Nbt = Saisie.lire_int(J2+" essaye de deviner le nombre mystère de " + J1 +" (" + Cpt + " coup(s) sur 10)");
+			// SAUT DE LIGNE	
+			System.out.println("");
+				
+				if (Nbt == Nbm)
+					{
+						Cpt = Cpt + 1;
+						System.out.println("victoire de " + J2 + " en " + Cpt + " coup(s) ");
+					}	
+						else 
+						{
+							if (Nbt < Nbm) 
+								{ 
+								
+							       System.out.println(J1 + " : Trop bas !" );
+							        Cpt = Cpt + 1;
+									// SAUT DE LIGNE	
+									System.out.println("");
+							    }
+							else 
+							    {
+								    System.out.println(J1 + " : Trop haut !" );
+								    Cpt = Cpt + 1;
+									// SAUT DE LIGNE	
+									System.out.println("");
+							    }
+					     }	
+							
+			}
+				
+		 if ((Cpt == 10) && (Nbt != Nbm))
+		 {
+			 System.out.println("Victoire de " + J1 + " !" ); 
+		 }
+	}
+
+	
+}
